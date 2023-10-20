@@ -1,0 +1,35 @@
+.title {
+  color: #ffffff;
+  text-align: center;
+  margin: 50px 0 0 0;
+  font-size: 50px;
+}
+
+.title2 {
+  color: #ffffff;
+  text-align: center;
+  margin: 20px 0 30px 0;
+  font-size: 20px;
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  .title {
+    font-size: 28px;
+  }
+
+  .title2 {
+    font-size: 13px;
+  }
+
+  .logo {
+    margin: 0;
+    width: 80%;
+    height: auto;
+  }
+}
