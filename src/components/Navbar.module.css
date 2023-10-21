@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  /*background-color: #15161f;*/
+  background-color: #000000;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  color: #b4b8c6;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logoName {
+  color: #4e9aff;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.active {
+  color: #4e9aff;
+  text-decoration: none;
+}
+
+.inActive {
+  color: #b4b8c6;
+  text-decoration: none;
+}
+
+.inActive:hover {
+  color: #4e9aff;
+}
+
+.inActive:hover {
+  cursor: pointer;
+}
