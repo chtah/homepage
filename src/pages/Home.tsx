@@ -5,7 +5,39 @@ import mailIcon from '../assets/mail.svg'
 import resumeIcon from '../assets/resume.svg'
 import scrollDown from '../assets/scrollDown.json'
 import { Player } from '@lottiefiles/react-lottie-player'
+import React from 'react'
+
+const { useState, useEffect } = React
+
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenToScroll)
+    return () => window.removeEventListener('scroll', listenToScroll)
+  })
+
+  //For hide scroll down botton when scroll
+  const listenToScroll = () => {
+    const heightToHideFrom = 1
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop
+
+    if (winScroll > heightToHideFrom) {
+      isVisible && setIsVisible(false)
+    } else {
+      setIsVisible(true)
+    }
+  }
+
+  //For click to scroll down 100vh
+  const handleClick = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <div className={classes.container}>
       <p className={classes.title}>
@@ -35,7 +67,11 @@ const Home = () => {
           </a>
         </li>
       </ul>
-      <Player className={classes.scrollDown} autoplay loop src={scrollDown}></Player>
+      {isVisible && (
+        <div onClick={handleClick}>
+          <Player className={classes.scrollDown} autoplay loop src={scrollDown}></Player>
+        </div>
+      )}
     </div>
   )
 }
