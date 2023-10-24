@@ -9,158 +9,222 @@ import Typography from '@mui/material/Typography'
 import { InView } from 'react-intersection-observer'
 import React from 'react'
 import Fade from '@mui/material/Fade'
+import { Box, Slide } from '@mui/material'
 
 const Journey = () => {
   const [inView, setInView] = React.useState(false)
+  const containerRef = React.useRef<HTMLElement>(null)
 
   return (
-    <div className={classes.body}>
-      <h2 className={classes.title}>My Journey</h2>
-      <InView onChange={setInView} triggerOnce={true}>
+    <Box sx={{ overflow: 'hidden' }} ref={containerRef}>
+      <div className={classes.body}>
+        <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+          <h2 className={classes.title}>My Journey</h2>
+        </Slide>
         <Timeline position="alternate">
           <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-              <TimelineContent sx={{ padding: 0, margin: 0 }}>
-                <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
-                  <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
-                </TimelineDot>
-              </TimelineContent>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-            </TimelineSeparator>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+                <TimelineContent sx={{ padding: 0, margin: 0 }}>
+                  <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
+                    <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
+                  </TimelineDot>
+                </TimelineContent>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+              </TimelineSeparator>
+            </Slide>
             <TimelineContent sx={{ py: '15px', px: 2 }}>
-              <Fade in={inView} {...(inView ? { timeout: 1000 } : {})}>
-                <Typography className={classes.firstText} variant="h6">
+              <Fade
+                in={inView}
+                {...(inView ? { timeout: 1000 } : {})}
+                style={{ transitionDelay: inView ? '800ms' : '0ms' }}
+              >
+                <Typography
+                  className={classes.firstText}
+                  variant="h6"
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '15px',
+                    },
+                  }}
+                >
                   Bootcamp at Cleverse Academy
                 </Typography>
               </Fade>
-              <Fade in={inView} {...(inView ? { timeout: 1000 } : {})}>
-                <Typography className={classes.secondText}>11 Sep - Now</Typography>
-              </Fade>
-            </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-              <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
-                <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
-              </TimelineDot>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '15px', px: 2 }}>
               <Fade
                 in={inView}
-                style={{ transitionDelay: inView ? '400ms' : '0ms' }}
-                {...(inView ? { timeout: 1500 } : {})}
+                {...(inView ? { timeout: 1000 } : {})}
+                style={{ transitionDelay: inView ? '800ms' : '0ms' }}
               >
-                <Typography className={classes.firstText} variant="h6">
-                  AWS Certified Cloud Practitioner
+                <Typography
+                  className={classes.secondText}
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '12px',
+                    },
+                  }}
+                >
+                  11 Sep - Now
                 </Typography>
               </Fade>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+                <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
+                  <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+              </TimelineSeparator>
+            </Slide>
+            <TimelineContent sx={{ py: '15px', px: 2 }}>
+              <InView onChange={setInView} triggerOnce={true}>
+                <Fade
+                  in={inView}
+                  style={{ transitionDelay: inView ? '1200ms' : '0ms' }}
+                  {...(inView ? { timeout: 1500 } : {})}
+                >
+                  <Typography
+                    className={classes.firstText}
+                    variant="h6"
+                    sx={{
+                      '@media (max-width:600px)': {
+                        fontSize: '15px',
+                      },
+                    }}
+                  >
+                    AWS Certified Cloud Practitioner
+                  </Typography>
+                </Fade>
+              </InView>
               <Fade
                 in={inView}
-                style={{ transitionDelay: inView ? '400ms' : '0ms' }}
+                style={{ transitionDelay: inView ? '1200ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.secondText}>10 Oct 2023</Typography>
+                <Typography
+                  className={classes.secondText}
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '12px',
+                    },
+                  }}
+                >
+                  10 Oct 2023
+                </Typography>
               </Fade>
             </TimelineContent>
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-              <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
-                <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
-              </TimelineDot>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-            </TimelineSeparator>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+                <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
+                  <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+              </TimelineSeparator>
+            </Slide>
             <TimelineContent sx={{ py: '15px', px: 2 }}>
               <Fade
                 in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '800ms' : '0ms' }}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1600ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.firstText} variant="h6">
+                <Typography
+                  className={classes.firstText}
+                  variant="h6"
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '15px',
+                    },
+                  }}
+                >
                   AWS re/Start Graduate
                 </Typography>
               </Fade>
               <Fade
                 in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '800ms' : '0ms' }}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1600ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.secondText}>July - 29 Sep 2023</Typography>
+                <Typography
+                  className={classes.secondText}
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '12px',
+                    },
+                  }}
+                >
+                  July - 29 Sep 2023
+                </Typography>
               </Fade>
             </TimelineContent>
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-              <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
-                <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
-              </TimelineDot>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-            </TimelineSeparator>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+                <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
+                  <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+              </TimelineSeparator>
+            </Slide>
             <TimelineContent sx={{ py: '15px', px: 2 }}>
               <Fade
                 in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1200ms' : '0ms' }}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1800ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.firstText} variant="h6">
+                <Typography
+                  className={classes.firstText}
+                  variant="h6"
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '15px',
+                    },
+                  }}
+                >
                   Google Cybersecurity Certificate
                 </Typography>
               </Fade>
               <Fade
                 in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1200ms' : '0ms' }}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1800ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.secondText}>5 Sep 2023</Typography>
-              </Fade>
-            </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-              <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
-                <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
-              </TimelineDot>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '15px', px: 2, fontSize: '10rem' }}>
-              <Fade
-                in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1600ms' : '0ms' }}
-                {...(inView ? { timeout: 1500 } : {})}
-              >
-                <Typography className={classes.firstText} variant="h6">
-                  Mechanical Engineer
+                <Typography
+                  className={classes.secondText}
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '12px',
+                    },
+                  }}
+                >
+                  5 Sep 2023
                 </Typography>
               </Fade>
-              <Fade
-                in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '1600ms' : '0ms' }}
-                {...(inView ? { timeout: 1500 } : {})}
-              >
-                <Typography className={classes.secondText}>June 2018 - July 2023</Typography>
-              </Fade>
             </TimelineContent>
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-              <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
-                <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
-              </TimelineDot>
-              <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '15px', px: 2 }}>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+                <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
+                  <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+              </TimelineSeparator>
+            </Slide>
+            <TimelineContent sx={{ py: '15px', px: 2, fontSize: '10rem' }}>
               <Fade
                 in={inView}
                 style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '2000ms' : '0ms' }}
@@ -170,13 +234,12 @@ const Journey = () => {
                   className={classes.firstText}
                   variant="h6"
                   sx={{
-                    fontSize: '20px',
                     '@media (max-width:600px)': {
                       fontSize: '15px',
                     },
                   }}
                 >
-                  B.E. in Naval Architech And Marine Engineering
+                  Mechanical Engineer
                 </Typography>
               </Fade>
               <Fade
@@ -184,22 +247,87 @@ const Journey = () => {
                 style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '2000ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.firstText} variant="body1">
+                <Typography
+                  className={classes.secondText}
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '12px',
+                    },
+                  }}
+                >
+                  June 2018 - July 2023
+                </Typography>
+              </Fade>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 800 } : {})}>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+                <TimelineDot sx={{ backgroundColor: '#4E9AFF', padding: '5px', m: 0 }}>
+                  <TimelineDot sx={{ backgroundColor: '#ffffff', padding: '10px', m: 0 }}></TimelineDot>
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: '#4e9aff', width: '5px' }} />
+              </TimelineSeparator>
+            </Slide>
+            <TimelineContent sx={{ py: '15px', px: 2 }}>
+              <Fade
+                in={inView}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '2400ms' : '0ms' }}
+                {...(inView ? { timeout: 1500 } : {})}
+              >
+                <Typography
+                  className={classes.firstText}
+                  variant="h6"
+                  sx={{
+                    fontSize: '20px',
+                    '@media (max-width:600px)': {
+                      fontSize: '10px',
+                    },
+                  }}
+                >
+                  B.E. in Marine Engineering
+                </Typography>
+              </Fade>
+              <Fade
+                in={inView}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '2400ms' : '0ms' }}
+                {...(inView ? { timeout: 1500 } : {})}
+              >
+                <Typography
+                  className={classes.firstText}
+                  variant="body1"
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '10px',
+                    },
+                  }}
+                >
                   Kasetsart University Sriracha Campus
                 </Typography>
               </Fade>
               <Fade
                 in={inView}
-                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '2000ms' : '0ms' }}
+                style={{ transformOrigin: '0 0 0', transitionDelay: inView ? '2400ms' : '0ms' }}
                 {...(inView ? { timeout: 1500 } : {})}
               >
-                <Typography className={classes.secondText}>May 2018</Typography>
+                <Typography
+                  className={classes.secondText}
+                  sx={{
+                    '@media (max-width:600px)': {
+                      fontSize: '10px',
+                    },
+                  }}
+                >
+                  May 2018
+                </Typography>
               </Fade>
             </TimelineContent>
           </TimelineItem>
         </Timeline>
-      </InView>
-    </div>
+      </div>
+    </Box>
   )
 }
 export default Journey

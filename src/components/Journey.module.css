@@ -5,11 +5,10 @@
 }
 
 .title {
-  text-align: center;
   padding: 20px 0;
-  margin: 0 0 50px 0;
+  margin: 0 0 20px 5%;
   color: #ffffff;
-  background-color: #4e9aff;
+  text-shadow: 3px 3px #4e9aff;
   font-size: 40px;
   font-weight: 600;
 }
@@ -21,4 +20,25 @@
 .secondText {
   color: #4e9aff;
   opacity: 0.4;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+  .title {
+    padding: 20px 0;
+    margin: 0 0 10px 5%;
+    color: #ffffff;
+    text-shadow: 3px 3px #4e9aff;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .firstText {
+    color: #ffffff;
+  }
+
+  .secondText {
+    color: #4e9aff;
+    opacity: 0.4;
+  }
 }

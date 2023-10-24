@@ -6,7 +6,7 @@ import mailIcon from '../assets/mail.svg'
 const Footer = () => {
   return (
     <div className={classes.body}>
-      <p className={classes.footer}>Chawakorn Hansuvanich © | all rights reserved</p>
+      <p className={classes.footer}>Chawakorn Hansuvanich | all rights reserved</p>
       <ul className={classes.iconList}>
         <li className={classes.linkedIn}>
           <a href="https://www.linkedin.com/in/chtah" target="_blank" rel="noopener noreferrer">
