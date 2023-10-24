@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer'
 import Journey from './components/Journey'
 import Project from './components/Project'
 import Skill from './components/Skill'
@@ -14,6 +15,7 @@ function App() {
       <Project />
       <Journey />
       <Skill />
+      <Footer />
     </div>
   )
 }

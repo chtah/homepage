@@ -158,7 +158,7 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🐱 Cat</p>
+                <p>🤖 Technology</p>
               </div>
             </Fade>
             <Fade
@@ -167,7 +167,16 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🤖 Technology</p>
+                <p>🔬 Science</p>
+              </div>
+            </Fade>
+            <Fade
+              in={inView}
+              style={{ transitionDelay: inView ? '1600ms' : '0ms' }}
+              {...(inView ? { timeout: 200 } : {})}
+            >
+              <div className={classes.card}>
+                <p>🐱 Cat</p>
               </div>
             </Fade>
           </div>

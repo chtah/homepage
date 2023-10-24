@@ -1,0 +1,42 @@
+.body {
+  display: flex;
+  gap: 20%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 10px 0;
+  background-color: #141a1f;
+}
+.footer {
+  font-size: 15px;
+  font-weight: 100;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.iconList {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+}
+
+.linkedIn {
+  list-style: none;
+}
+
+.github {
+  list-style: none;
+}
+
+.mail {
+  list-style: none;
+}
+
+.iconList img {
+  width: 40px;
+}
+
+.iconList img:hover {
+  opacity: 0.5;
+}
