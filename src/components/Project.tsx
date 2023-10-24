@@ -12,13 +12,13 @@ const Project = () => {
   return (
     <Box sx={{ overflow: 'hidden' }} ref={containerRef}>
       <div className={classes.body}>
-        <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 1000 } : {})}>
+        <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 1400 } : {})}>
           <h2 className={classes.title}>Project</h2>
         </Slide>
 
         <InView onChange={setInView} triggerOnce={true}>
           <div className={classes.container}>
-            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 1300 } : {})}>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 1400 } : {})}>
               <a href="https://vidhub.chtah.me" target="_blank" rel="noopener noreferrer">
                 <div className={classes.card}>
                   <img className={classes.image} src={vidhubBanner} />
@@ -35,7 +35,7 @@ const Project = () => {
               </a>
             </Slide>
 
-            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 1600 } : {})}>
+            <Slide in={inView} container={containerRef.current} direction="up" {...(inView ? { timeout: 1700 } : {})}>
               <a href="https://learn.chtah.me" target="_blank" rel="noopener noreferrer">
                 <div className={classes.card}>
                   <img className={classes.image} src={ComingSoonBanner} />

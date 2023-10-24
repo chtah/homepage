@@ -4,6 +4,7 @@ import githubIcon from '../assets/github.svg'
 import mailIcon from '../assets/mail.svg'
 import resumeIcon from '../assets/resume.svg'
 import scrollDown from '../assets/scrollDown.json'
+import resumePDF from '../assets/ChawakornHansuvanich_resume.pdf'
 import { Player } from '@lottiefiles/react-lottie-player'
 import React from 'react'
 
@@ -62,7 +63,7 @@ const Home = () => {
           </a>
         </li>
         <li className={classes.resume}>
-          <a href="/ChawakornHansuvanich_resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={resumePDF} target="_blank" rel="noopener noreferrer">
             <img src={resumeIcon} alt="" />
           </a>
         </li>
