@@ -1,6 +1,6 @@
 import classes from './Project.module.css'
-import vidhubBanner from '../assets/vidhub_banner.svg'
-import ComingSoonBanner from '../assets/comingsoon_banner.svg'
+import vidhubBanner from '../assets/vidhub_banner.png'
+import ComingSoonBanner from '../assets/comingsoon_banner.png'
 import React from 'react'
 import { InView } from 'react-intersection-observer'
 import { Box, Slide } from '@mui/material'
