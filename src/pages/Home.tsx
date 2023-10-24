@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div className={classes.container}>
       <p className={classes.title}>
-        &#123;&nbsp;&nbsp;Hi, I&apos;m Tah <span className={classes.wave}>👋</span>&nbsp;&nbsp;&#125;
+        &lt;&nbsp;&nbsp;Hi, I&apos;m Tah <span className={classes.wave}>👋</span>&nbsp;&nbsp;/&gt;
       </p>
       <p className={classes.intro}>I have recently come to the realization that I enjoy coding</p>
 

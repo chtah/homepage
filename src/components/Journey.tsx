@@ -16,7 +16,7 @@ const Journey = () => {
   return (
     <div className={classes.body}>
       <h2 className={classes.title}>My Journey</h2>
-      <InView onChange={setInView}>
+      <InView onChange={setInView} triggerOnce={true}>
         <Timeline position="alternate">
           <TimelineItem>
             <TimelineSeparator>
