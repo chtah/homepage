@@ -2,15 +2,15 @@
   background-color: #101418;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  margin: 0 0 150px 0;
 }
 
 .title {
-  text-align: center;
   padding: 20px 0;
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 5%;
   color: #ffffff;
-  background-color: #4e9aff;
+
+  text-shadow: 3px 3px #4e9aff;
   font-size: 40px;
   font-weight: 600;
 }
@@ -22,7 +22,7 @@
 }
 
 .card {
-  width: 40vw;
+  width: 30vw;
   min-width: 250px;
   /*box-shadow: 0 0 10px 5px rgb(0 0 0 / 0.1);*/
   background-color: #141a1f;
@@ -34,7 +34,7 @@
 }
 
 .image {
-  width: 40vw;
+  width: 30vw;
   min-width: 250px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -69,4 +69,56 @@
 
 .card:hover {
   border-color: rgba(78, 154, 255, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+
+  .body {
+    margin: 0 0 50px 0;
+  }
+
+  .title {
+    padding: 0;
+    margin: 0 0 25px 5%;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .container {
+    gap: 15px;
+  }
+
+  .card {
+    min-width: 160px;
+    border-radius: 15px;
+  }
+
+  .image {
+    min-width: 160px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .cardText {
+    height: 120px;
+  }
+
+  .projectName {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 15px;
+  }
+
+  .description {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 15px;
+  }
+
+  .cardTextDown {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 12px;
+  }
 }

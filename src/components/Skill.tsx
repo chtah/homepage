@@ -104,7 +104,8 @@ const Skill = () => {
           <div className={classes.container}>
             <Fade in={inView} {...(inView ? { timeout: 500 } : {})}>
               <div className={classes.card}>
-                <p>📖 Read Book</p>
+                <p className={classes.emoji}>📖 </p>
+                <p>Read Book</p>
               </div>
             </Fade>
             <Fade
@@ -113,7 +114,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🍿 Movie</p>
+                <p className={classes.emoji}>🍿 </p>
+                <p>Movie</p>
               </div>
             </Fade>
             <Fade
@@ -122,7 +124,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>👾 Play Game</p>
+                <p className={classes.emoji}>👾 </p>
+                <p>Play Game</p>
               </div>
             </Fade>
             <Fade
@@ -131,7 +134,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>📺 Anime</p>
+                <p className={classes.emoji}>📺 </p>
+                <p>Anime</p>
               </div>
             </Fade>
             <Fade
@@ -140,7 +144,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🏓 Table Tennis</p>
+                <p className={classes.emoji}>🏓 </p>
+                <p className={classes.longText}>Table Tennis</p>
               </div>
             </Fade>
             <Fade
@@ -149,7 +154,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🏸 Badminton</p>
+                <p className={classes.emoji}>🏸 </p>
+                <p>Badminton</p>
               </div>
             </Fade>
             <Fade
@@ -158,7 +164,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🤖 Technology</p>
+                <p className={classes.emoji}>🤖 </p>
+                <p>Technology</p>
               </div>
             </Fade>
             <Fade
@@ -167,7 +174,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🔬 Science</p>
+                <p className={classes.emoji}>🔬 </p>
+                <p>Science</p>
               </div>
             </Fade>
             <Fade
@@ -176,7 +184,8 @@ const Skill = () => {
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
-                <p>🐱 Cat</p>
+                <p className={classes.emoji}>🐱 </p>
+                <p>Cat</p>
               </div>
             </Fade>
           </div>

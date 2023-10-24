@@ -108,4 +108,25 @@
 
 @media only screen and (max-width: 600px) {
   /* For mobile: */
+
+  .container {
+    gap: 3%;
+  }
+
+  .title {
+    font-size: 200%;
+  }
+
+  .intro {
+    width: 80%;
+    font-size: 120%;
+  }
+
+  .iconList {
+    gap: 15px;
+  }
+
+  .iconList img {
+    width: 45px;
+  }
 }

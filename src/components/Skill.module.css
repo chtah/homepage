@@ -55,8 +55,54 @@
   font-size: 12px;
 }
 
+.interestContainer .longText {
+  font-size: 14px;
+}
 .card:hover {
   color: #000000;
   background-color: #ffffff;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+  .body {
+    margin: 40px 0;
+  }
+
+  .title {
+    font-size: 20px;
+    padding: 0 0 15px 0;
+  }
+
+  .container {
+    gap: 5px;
+  }
+
+  .card {
+    gap: 15px;
+    padding: 10px;
+    width: 140px;
+    height: 19px;
+    font-size: 15px;
+
+    border-style: solid;
+    background-color: #141a1f;
+    border-radius: 20px;
+    border-color: rgba(218, 224, 231, 0.9);
+    border-width: 2px;
+  }
+
+  .card img {
+    width: 20px;
+    visibility: visible;
+  }
+
+  .longText {
+    font-size: 15px;
+  }
+
+  .emoji {
+    visibility: visible;
+  }
 }
