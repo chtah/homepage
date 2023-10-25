@@ -1,7 +1,7 @@
 import classes from './Footer.module.css'
-import linkinIcon from '../assets/linkedin.png'
-import githubIcon from '../assets/github.png'
-import mailIcon from '../assets/mail.png'
+import linkinIcon from '../assets/linkedIn.svg'
+import githubIcon from '../assets/github.svg'
+import mailIcon from '../assets/mail.svg'
 
 const Footer = () => {
   return (
