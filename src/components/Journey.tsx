@@ -49,7 +49,9 @@ const Journey = () => {
                     },
                   }}
                 >
-                  Bootcamp at Cleverse Academy
+                  <a href="https://academy.cleverse.com/" target="_blank" rel="noopener noreferrer">
+                    Bootcamp at Cleverse Academy
+                  </a>
                 </Typography>
               </Fade>
               <Fade
@@ -97,7 +99,13 @@ const Journey = () => {
                       },
                     }}
                   >
-                    AWS Certified Cloud Practitioner
+                    <a
+                      href="https://www.credly.com/badges/e22935e9-a8de-4447-88f6-969ca9b3255c/public_url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      AWS Certified Cloud Practitioner
+                    </a>
                   </Typography>
                 </Fade>
               </InView>
@@ -145,7 +153,13 @@ const Journey = () => {
                     },
                   }}
                 >
-                  AWS re/Start Graduate
+                  <a
+                    href="https://www.credly.com/badges/27c1fc7d-ea05-448b-87f5-e000676c8354/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    AWS re/Start Graduate
+                  </a>
                 </Typography>
               </Fade>
               <Fade
@@ -192,7 +206,13 @@ const Journey = () => {
                     },
                   }}
                 >
-                  Google Cybersecurity Certificate
+                  <a
+                    href="https://www.credly.com/badges/3c832b4b-f133-4e2f-930d-d23943aef62e/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google Cybersecurity Certificate
+                  </a>
                 </Typography>
               </Fade>
               <Fade
