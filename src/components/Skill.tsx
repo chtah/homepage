@@ -7,6 +7,9 @@ import typescript_logo from '../assets/typescript_logom.svg'
 import react_logo from '../assets/react_logo.svg'
 import mysql_logo from '../assets/mysql_logo.svg'
 import nodejs_logo from '../assets/nodejs_logo.svg'
+import postgresql_logo from '../assets/postgresql_logo.svg'
+import prisma_logo from '../assets/prisma_logo.svg'
+import docker_logo from '../assets/docker_logo.svg'
 import Fade from '@mui/material/Fade'
 import { InView } from 'react-intersection-observer'
 import React from 'react'
@@ -89,6 +92,36 @@ const Skill = () => {
             <Fade
               in={inView}
               style={{ transitionDelay: inView ? '1400ms' : '0ms' }}
+              {...(inView ? { timeout: 200 } : {})}
+            >
+              <div className={classes.card}>
+                <img src={postgresql_logo} />
+                <p>PostgreSQL</p>
+              </div>
+            </Fade>
+            <Fade
+              in={inView}
+              style={{ transitionDelay: inView ? '1600ms' : '0ms' }}
+              {...(inView ? { timeout: 200 } : {})}
+            >
+              <div className={classes.card}>
+                <img src={prisma_logo} />
+                <p>Prisma</p>
+              </div>
+            </Fade>
+            <Fade
+              in={inView}
+              style={{ transitionDelay: inView ? '1800ms' : '0ms' }}
+              {...(inView ? { timeout: 200 } : {})}
+            >
+              <div className={classes.card}>
+                <img src={docker_logo} />
+                <p>Docker</p>
+              </div>
+            </Fade>
+            <Fade
+              in={inView}
+              style={{ transitionDelay: inView ? '2000ms' : '0ms' }}
               {...(inView ? { timeout: 200 } : {})}
             >
               <div className={classes.card}>
